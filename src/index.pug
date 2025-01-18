@@ -1,8 +1,17 @@
 extends template
-block content
+
+block nav
     nav
-        +CreateMenu(dictMenu, title, 'Главная')
-
-    +CreateGallery(listImages, "apl.html")
-    +CreateArticle(listSections)
-
+      +createMenu(dictMenu, 'index.html')
+    
+block content
+    div.images
+      each pict in listImages
+       a(href= "building.html")
+        img(src= require("./images/" + pict))
+        
+    article
+      each item in listSections
+        section
+          +createMenu_section(item)
+       
