@@ -1,0 +1,150 @@
+body
+    margin 0
+  
+nav
+    back(0) 
+    width 80%
+    margin 0 auto
+    background-color lightgrey
+    display grid
+    grid-template-columns 1fr 3fr
+    line-height 200%
+    font-size 1.5em
+    overflow hidden
+    justify-content center
+    text-align center
+
+    & div
+
+        & .menu
+            vertical-align bottom
+
+            &__a
+                margin-left 10%
+                text-decoration none
+                color black
+
+                &:hover
+                &_active
+                    background-color yellow
+                    text-decoration none
+                    color black
+                    margin-left 10%
+            
+        
+
+.images
+    width 80%
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    grid-gap 0.5%
+    margin 1% auto
+
+    &__img
+        width: 100%
+        height: 100%
+        transition transform 0.3s ease
+
+        &:hover
+            transform scale(1.1)
+
+.article
+   
+    width 80%
+    margin auto
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    grid-gap 2.25%
+    
+    &__h3
+        text-align center
+        font-size 1.5em
+    &__p
+        text-align justify
+        white-space pre-line
+
+    section
+        border solid thin grey
+        background-color #B5FFF4
+
+footer
+    background-color lightgrey;
+    height 35px
+
+
+
+
+.imagesR
+    width 500px
+    margin auto
+
+    &__img
+        width 100%
+        height 100%
+        transition transform 0.3s ease
+
+        &:hover
+            transform scale(1.05)
+div
+
+    &.articleR
+        width 80%
+        margin auto
+        display grid
+        grid-template-columns repeat(1, 1fr)
+        grid-gap 2.25%
+        overflow hidden
+
+          &__h3
+            text-align center
+            margin auto
+            font-size 1.5em
+          &__p
+            text-align justify
+            white-space pre-line
+        section
+            border solid thin grey
+            background-color #B5FFF4
+
+
+table
+    margin 20px auto
+    border 1
+    padding 10px
+    text-align center
+    background-color #90EE90
+    border-collapse collapse
+
+details
+    & table
+        margin 0
+        background-color lightgrey
+        text-align left
+
+
+@media screen and (max-width: 900px)
+    nav
+        justify-content center
+        text-align center
+        font-size 1.2em
+
+    .images
+        grid-template-columns: repeat(1,1fr)
+        grid-template-rows: repeat(4, 0.3fr)
+        grid-gap 0
+
+    .article
+        grid-template-columns: 1fr
+
+    .imagesR
+        width 80%
+
+
+
+
+        
+
+
+
+
+

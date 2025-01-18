@@ -1,0 +1,41 @@
+mixin CreateMenu(dictMenu, title, active)
+    strong= title
+    div.menu
+        each value, key in dictMenu
+            if active == key
+                a.menu__a_active(href=value)= key
+            else
+                a.menu__a(href=value)= key
+
+//mixin CreateMenu(dictMenu, title)
+    strong= title
+    div.menu
+        each value, key in dictMenu
+            a.menu__a(href= value)= key
+
+mixin CreateGallery(listImages, name)
+    div.images
+        each pict in listImages
+            a(href= name)
+                img.images__img(src= require("./images/" + pict))
+
+mixin CreateArticle(listSections)
+    div.article
+        each item in listSections
+            section
+                h3.article__h3= item.header
+                p.article__p= item.text
+
+mixin CreateGalleryR(listImages, name)
+    div.imagesR
+        each pict in listImages
+            a(href= name)
+            img.imagesR__img(src= require("./images/" + pict))
+
+mixin CreateArticleR(listSections)
+    div.articleR
+        each item in listSections
+            section
+                h3.articleR__h3= item.header
+                p.articleR__p= item.text
+

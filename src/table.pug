@@ -1,0 +1,55 @@
+extends template
+
+block content
+    nav
+        +CreateMenu(dictMenu, title, 'Таблица')
+    details
+        summary= grapg
+        table(border="1")
+            each item in N1
+                tr
+                    td= item.first
+                    td= item.second
+                each item in N
+                    tr
+                        td
+                            input(type= 'radio' name= 'OX' value= item.numb placeholder= item.first)
+                            text= item.first
+                        td
+                            input(type= 'checkbox' name= 'Rex' value= item.numb)
+                            text= item.second
+
+    details
+        summary= filter
+        each item in Name
+            p
+                text= item
+                input(type= 'text')
+
+    details
+        summary= sort
+        each lvl in Sorted
+            input(type= 'button' name= 'YesNo')
+            text= lvl.lv
+            select
+                option(value= '0')= lvl.gamer
+                option(value= '1')= lvl.year
+                option(value= '2')= lvl.country
+                option(value= '3')= lvl.club
+                option(value= '4')= lvl.money
+                option(value= '5')= lvl.posichion
+            br
+
+    table(border="1")
+        tbody
+            tr
+                each name in listname
+                    th= name
+            each item in listSectionsTable
+                tr
+                    td= item.gamer
+                    td= item.year
+                    td= item.country
+                    td= item.club
+                    td= item.money
+                    td= item.posichion

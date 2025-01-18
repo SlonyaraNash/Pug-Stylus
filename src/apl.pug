@@ -1,0 +1,7 @@
+extends template
+block content
+    nav
+        +CreateMenu(dictMenu, title, 'Главная')
+
+    +CreateGalleryR(listImagesAPL, "apl.html")
+    +CreateArticleR(listSectionsAPL)

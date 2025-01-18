@@ -1,0 +1,16 @@
+include components/mixin.pug
+include components/data.pug
+
+doctype html
+html(lang="ru")
+    head
+        title #{title}
+    body
+        //nav
+            +CreateMenu(dictMenu, title, 'Главная')
+
+        block content
+       
+        footer
+            each item in TextFooter
+                h4= item
